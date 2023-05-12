@@ -18,13 +18,13 @@ end
 
 % Create a face detector object and detect faces in the input image
 faceDetector = vision.CascadeObjectDetector;
-bboxes = step(faceDetector, inputImage);
+boxes = step(faceDetector, inputImage);
 
 % Specify the folder path to save the segmented faces
 folderPath = 'C:\Users\DELL\image_project\faces\';
 
 % Display the detected faces on the input image
-numFaces = size(bboxes, 1);
+numFaces = size(boxes, 1);
 if numFaces > 0
     labels = cell(numFaces, 1);
     for i = 1:numFaces
@@ -39,9 +39,9 @@ if numFaces > 0
         title(sprintf('Segmented Face %d', i));
     end
     % Display the input image with face detections
-    IFaces = insertObjectAnnotation(inputImage, 'rectangle', bboxes, labels);
+    Faces = insertObjectAnnotation(inputImage, 'rectangle', bboxes, labels, 'LineWidth', 3, 'Color', 'r');
     figure;
-    imshow(IFaces);
+    imshow(Faces);
     title(sprintf('Detected %d Faces', numFaces));
 else
     disp('No faces detected.');
