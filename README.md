@@ -1,4 +1,4 @@
-# Real-Time Face Detection in Webcam Video Stream and Image Segmentation
+# Real-Time Face Detection in Webcam Video Stream
 This MATLAB code snippet performs real-time face detection in a webcam video stream and image segmentation. It utilizes the Computer Vision System Toolbox to detect faces and segment them from an input image or live video stream. This code can be used for various applications, including facial recognition, attendance monitoring, and surveillance systems.
 
 ## Usage
