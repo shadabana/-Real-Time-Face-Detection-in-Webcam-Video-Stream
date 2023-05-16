@@ -2,7 +2,7 @@
 number = input('Enter a number (1: image path, 2: real time detection): ');
 
 if number == 1
-    imagePath = input('Enter the image path');
+    imagePath = input('Enter the image path: ','s');
     % Load the input image and convert to grayscale
 inputImage = imread(imagePath); % 'input/faces.jpg'
 inputImage = rgb2gray(inputImage);
