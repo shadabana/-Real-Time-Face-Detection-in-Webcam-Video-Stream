@@ -56,8 +56,8 @@ elseif number == 2
 videoInput = videoinput('winvideo', 1, 'RGB24_640x480');
 
 % Set video input properties
-videoInput.FramesPerTrigger = 60;
-%videoInput.TriggerRepeat = Inf;
+videoInput.FramesPerTrigger = 10;
+videoInput.TriggerRepeat = Inf;
 
 % Create cascade object detector
 faceDetector = vision.CascadeObjectDetector();
